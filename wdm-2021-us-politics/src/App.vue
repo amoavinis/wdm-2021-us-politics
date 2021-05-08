@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <h1 style="text-align: center">US Politics Topic Detection and Demographics Analysis</h1>
+    <div style="text-align: center"> Developed by Angelos Moavinis, Asterios Bampakis, Themistoklis Spanoudis and Konstantinos Giantsios</div>
     <HelloWorld msg="Change"/>
   </div>
 </template>

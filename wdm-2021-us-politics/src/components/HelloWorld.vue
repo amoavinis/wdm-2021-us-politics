@@ -1,40 +1,83 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <Chart :options="options"/>
   </div>
 </template>
 
 <script>
+import { Chart } from "highcharts-vue";
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  components: {
+    Chart,
+  },
+
+  computed: {
+    options() {
+      let chartObj = {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Historic World Population by Region'
+          },
+          subtitle: {
+              text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
+          },
+          xAxis: {
+              categories: ['First period', 'Second period', 'Third period', 'Fourth period'],
+              title: {
+                  text: null
+              }
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Population',
+              },
+              labels: {
+                  overflow: 'justify'
+              }
+          },
+          plotOptions: {
+              bar: {
+                  dataLabels: {
+                      enabled: true
+                  }
+              }
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'top',
+              x: -40,
+              y: 80,
+              floating: true,
+              borderWidth: 1,
+              backgroundColor:
+                  '#FFFFFF',
+              shadow: true
+          },
+          credits: {
+              enabled: false
+          },
+          series: [{
+              name: '<=24 years old',
+              data: [107, 31, 635, 203]
+          }, {
+              name: '25 - 45 years old',
+              data: [133, 156, 947, 408]
+          }, {
+              name: '45 - 65 years old',
+              data: [814, 841, 3714, 727]
+          }, {
+              name: '65+ years old',
+              data: [1216, 1001, 4436, 738]
+          }]
+      }
+
+      return chartObj;
+    }
   }
 }
 </script>
