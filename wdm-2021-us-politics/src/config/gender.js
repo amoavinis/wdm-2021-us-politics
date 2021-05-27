@@ -102,7 +102,7 @@ export const maleAge = {
 
 export const femalePolitical = {
     chart: {
-        type: 'pie'
+        type: 'pie',
     },
     title: {
         text: 'Female users and their political orientation'
@@ -148,7 +148,7 @@ export const femalePolitical = {
 
 export const malePolitical = {
     chart: {
-        type: 'pie'
+        type: 'pie',
     },
     title: {
         text: 'Male users and their political orientation'
