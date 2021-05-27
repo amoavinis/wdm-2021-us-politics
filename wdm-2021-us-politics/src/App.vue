@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header></Header>
-    <Demographics />
-    <Topics />
+    <Header @event1="selectTab"></Header>
+    <Demographics v-if="selectedTab==1"/>
+    <Topics v-if="selectedTab==2"/>
   </div>
 </template>
 
@@ -17,6 +17,18 @@ export default {
     Header,
     Demographics,
     Topics,
+  },
+
+  data: () => {
+    return {
+      selectedTab: 0
+    };
+  },
+
+  methods: {
+    selectTab(t) {
+      this.selectedTab = t
+    }
   }
 }
 </script>

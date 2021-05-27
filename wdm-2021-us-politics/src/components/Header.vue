@@ -3,19 +3,22 @@
         <div class="header">
             <h1 style="text-align: center">US Politics Topic Detection and Demographics Analysis</h1>
             <div style="text-align: center"> Developed by Angelos Moavinis, Asterios Bampakis, Themistoklis Spanoudis and Konstantinos Giantsios</div>
-            <div>About.....</div>
         </div>
         <div class="grid-container">
-            <div class="grid-item"><a>Demographics, sentiment and subjectivity analysis</a></div>
-            <div class="grid-item"><a>Topics</a></div>
-            <div class="grid-item"><a>User clusters</a></div>
-        </div> 
+            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(1)">Demographics, sentiment and subjectivity analysis</a></div>
+            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(2)">Topics</a></div>
+            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(3)">User clusters</a></div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    
+    methods: {
+      emitToParent(event) {
+        this.$emit('event1', event);
+      }
+    },
 }
 </script>
 

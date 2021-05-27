@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="align-content:center;">
     <h2>General Demographics</h2>
     <div class="grid-2">
       <Chart :options="demographicsAgeGeneral" class="chart-3"/>
@@ -12,16 +12,16 @@
     <Chart :options="sentimentSubjectivity[1]" class="chart-2"/>
 
     <h2>Age distribution of genders</h2>
-    <div>
+    <div class="grid-2">
       <Chart :options="demographicsGender[0]" class="chart-2"/>
       <Chart :options="demographicsGender[4]" class="chart-2"/>
     </div>
     
     <h2>Political affiliation distribution of genders</h2>
-    <div>
+    <span style="display:inline;">
       <Chart :options="demographicsGender[1]" class="chart-2"/>
       <Chart :options="demographicsGender[5]" class="chart-2"/>
-    </div>
+    </span>
 
     <h2>Sentiment distribution of genders</h2>
     <div>
