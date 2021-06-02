@@ -11,6 +11,18 @@
         <div style="width: 20%;margin: 0 auto;"><h3>Kalinki-Harabasz clustering metric</h3></div>
         <Chart :options="getKalinskiHarabasz"/>
 
+        <div style="width: 20%;margin: 0 auto;"><h2>User clusters wordclouds</h2></div>
+        
+        <div style="width: 20%;margin: 0 auto;"><h3>Cluster 1</h3></div>
+        <div class="image"><img src="@/assets/cluster_1.png" alt=""></div>
+        
+        <div style="width: 20%;margin: 0 auto;"><h3>Cluster 2</h3></div>
+        <div class="image"><img src="@/assets/cluster_2.png" alt=""></div>
+        
+        <div style="width: 20%;margin: 0 auto;"><h3>Cluster 3</h3></div>
+        <div class="image"><img src="@/assets/cluster_3.png" alt=""></div>
+
+
         <div style="width: 20%;margin: 0 auto;"><h3>Retweet graph</h3></div>
         <div class="image"><img src="@/assets/retweet-graph.png" alt=""></div>
     </div>
