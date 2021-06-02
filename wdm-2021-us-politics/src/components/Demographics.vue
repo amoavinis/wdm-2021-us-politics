@@ -1,61 +1,61 @@
 <template>
   <div style="align-content:center;">
-    <h2>General Demographics</h2>
+    <div class="header"><h2>General Demographics</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsAgeGeneral"/></div>
       <div class="column"><Chart :options="demographicsGenderGeneral"/></div>
     </div>
     <Chart :options="demographicsPoliticalGeneral"/>
     
-    <h2>Sentiment and Subjectivity - General</h2>
+    <div class="header"><h2>Sentiment and Subjectivity - General</h2></div>
     <div class="row">
       <div class="column"><Chart :options="sentimentSubjectivity[0]"/></div>
       <div class="column"><Chart :options="sentimentSubjectivity[1]"/></div>
     </div>
 
-    <h2>Age distribution of genders</h2>
+    <div class="header"><h2>Age distribution of genders</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsGender[0]"/></div>
       <div class="column"><Chart :options="demographicsGender[4]"/></div>
     </div>
     
-    <h2>Political affiliation distribution of genders</h2>
+    <div class="header"><h2>Political affiliation distribution of genders</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsGender[1]"/></div>
       <div class="column"><Chart :options="demographicsGender[5]"/></div>
     </div>
 
-    <h2>Sentiment distribution of genders</h2>
+    <div class="header"><h2>Sentiment distribution of genders</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsGender[2]" class="chart-2"/></div>
       <div class="column"><Chart :options="demographicsGender[6]" class="chart-2"/></div>
     </div>
 
-    <h2>Subjectivity distribution of genders</h2>
+    <div class="header"><h2>Subjectivity distribution of genders</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsGender[3]" class="chart-2"/></div>
       <div class="column"><Chart :options="demographicsGender[7]" class="chart-2"/></div>
     </div>
     
-    <h2>Age distribution of parties</h2>
+    <div class="header"><h2>Age distribution of parties</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsPolitical[0]" class="chart-2"/></div>
       <div class="column"><Chart :options="demographicsPolitical[4]" class="chart-2"/></div>
     </div>
     
-    <h2>Gender distribution of parties</h2>
+    <div class="header"><h2>Gender distribution of parties</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsPolitical[1]" class="chart-2"/></div>
       <div class="column"><Chart :options="demographicsPolitical[5]" class="chart-2"/></div>
     </div>
 
-    <h2>Sentiment distribution of parties</h2>
+    <div class="header"><h2>Sentiment distribution of parties</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsPolitical[2]" class="chart-2"/></div>
       <div class="column"><Chart :options="demographicsPolitical[6]" class="chart-2"/></div>
     </div>
 
-    <h2>Subjectivity distribution of parties</h2>
+    <div class="header"><h2>Subjectivity distribution of parties</h2></div>
     <div class="row">
       <div class="column"><Chart :options="demographicsPolitical[3]" class="chart-2"/></div>
       <div class="column"><Chart :options="demographicsPolitical[7]" class="chart-2"/></div>
@@ -151,6 +151,16 @@ export default {
 }
 h2 {
   text-align: center;
-  margin: 150px 0 100px 0;
+  margin: 50px 0 50px 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 2px solid lightblue;
+  padding: 10px;
+  border-radius:10px;
+}
+.header {
+  width: 20%;
+  margin: 0 auto;
 }
 </style>

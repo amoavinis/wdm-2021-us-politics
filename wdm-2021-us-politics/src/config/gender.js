@@ -6,7 +6,7 @@ export const femaleAge = {
         text: 'Female users and their ages'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     plotOptions: {
         bar: {
@@ -35,16 +35,16 @@ export const femaleAge = {
         colorByPoint: true,
         data: [{
             name: '18-29',
-            y: 98079
+            y: 46.19
         }, {
             name: '30-49',
-            y: 106716
+            y: 50.26
         }, {
             name: '50-65',
-            y: 6524
+            y: 3.07
         }, {
             name: '66+',
-            y: 977
+            y: 0.46
         }]
     }]
 }
@@ -57,7 +57,7 @@ export const maleAge = {
         text: 'Male users and their ages'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     plotOptions: {
         bar: {
@@ -86,16 +86,16 @@ export const maleAge = {
         colorByPoint: true,
         data: [{
             name: '18-29',
-            y: 220597
+            y: 36.66
         }, {
             name: '30-49',
-            y: 347395
+            y: 57.74
         }, {
             name: '50-65',
-            y: 29877
+            y: 4.96
         }, {
             name: '66+',
-            y: 3716
+            y: 0.61
         }]
     }]
 }
@@ -108,7 +108,7 @@ export const femalePolitical = {
         text: 'Female users and their political orientation'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     colors: ["#0062ff", "#ff2e2e"],
     plotOptions: {
@@ -138,10 +138,10 @@ export const femalePolitical = {
         colorByPoint: true,
         data: [{
             name: 'Democrats',
-            y: 119741
+            y: 56.40
         }, {
             name: 'Republicans',
-            y: 92555
+            y: 43.60
         }]
     }]
 }
@@ -154,7 +154,7 @@ export const malePolitical = {
         text: 'Male users and their political orientation'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     colors: ["#0062ff", "#ff2e2e"],
     plotOptions: {
@@ -184,10 +184,10 @@ export const malePolitical = {
         colorByPoint: true,
         data: [{
             name: 'Democrats',
-            y: 357646
+            y: 59.46
         }, {
             name: 'Republicans',
-            y: 243939
+            y: 40.54
         }]
     }]
 }
@@ -200,7 +200,7 @@ export const femaleSentiment = {
         text: 'Female users and their sentiment analysis'
     },
     subtitle: {
-        text: 'sample'
+        text: ''
     },
     colors: ["#ff2e2e", "#fdff7a", "#39fa3d"],
     xAxis: {
@@ -212,7 +212,7 @@ export const femaleSentiment = {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of tweets',
+            text: 'Percentage of tweets',
         },
         labels: {
             overflow: 'justify'
@@ -241,13 +241,13 @@ export const femaleSentiment = {
     },
     series: [{
         name: 'Negative',
-        data: [81379]
+        data: [38.33]
     }, {
         name: 'Neutral',
-        data: [40536]
+        data: [19.09]
     }, {
         name: 'Positive',
-        data: [90381]
+        data: [42.57]
     }]
 }
 
@@ -259,7 +259,7 @@ export const maleSentiment = {
         text: 'Male users and their sentiment analysis'
     },
     subtitle: {
-        text: 'sample'
+        text: ''
     },
     colors: ["#ff2e2e", "#fdff7a", "#39fa3d"],
     xAxis: {
@@ -271,7 +271,7 @@ export const maleSentiment = {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of tweets',
+            text: 'Percentage of tweets',
         },
         labels: {
             overflow: 'justify'
@@ -300,13 +300,13 @@ export const maleSentiment = {
     },
     series: [{
         name: 'Negative',
-        data: [247735]
+        data: [41.18]
     }, {
         name: 'Neutral',
-        data: [122071]
+        data: [20.29]
     }, {
         name: 'Positive',
-        data: [231779]
+        data: [38.53]
     }]
 }
 
@@ -318,7 +318,7 @@ export const femaleSubjectivity = {
         text: 'Female users and their subjectivity'
     },
     subtitle: {
-        text: 'sample'
+        text: ''
     },
     colors: ["#7cb5ec"],
     xAxis: {
@@ -330,7 +330,7 @@ export const femaleSubjectivity = {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of tweets',
+            text: 'Percentage of tweets',
         },
         labels: {
             overflow: 'justify'
@@ -359,43 +359,43 @@ export const femaleSubjectivity = {
     },
     series: [{
         name: '0-0.1',
-        data: [57318]
+        data: [27.00]
     },
     {
         name: '0.1-0.2',
-        data: [9050]
+        data: [4.26]
     },
     {
         name: '0.2-0.3',
-        data: [16337]
+        data: [7.69]
     },
     {
         name: '0.3-0.4',
-        data: [17967]
+        data: [8.46]
     },
     {
         name: '0.4-0.5',
-        data: [24581]
+        data: [11.57]
     },
     {
         name: '0.5-0.6',
-        data: [34388]
+        data: [16.19]
     },
     {
         name: '0.6-0.7',
-        data: [18521]
+        data: [8.72]
     },
     {
         name: '0.7-0.8',
-        data: [11056]
+        data: [5.20]
     },
     {
         name: '0.8-0.9',
-        data: [7309]
+        data: [3.49]
     },
     {
         name: '0.9-1',
-        data: [15769]
+        data: [7.42]
     }]
 }
 
@@ -407,7 +407,7 @@ export const maleSubjectivity = {
         text: 'Male users and their subjectivity'
     },
     subtitle: {
-        text: 'sample'
+        text: ''
     },
     colors: ["#7cb5ec"],
     xAxis: {
@@ -419,7 +419,7 @@ export const maleSubjectivity = {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of tweets',
+            text: 'Percentage of tweets',
         },
         labels: {
             overflow: 'justify'
@@ -448,42 +448,42 @@ export const maleSubjectivity = {
     },
     series: [{
         name: '0-0.1',
-        data: [170026]
+        data: [28.26]
     },
     {
         name: '0.1-0.2',
-        data: [31567]
+        data: [5.24]
     },
     {
         name: '0.2-0.3',
-        data: [57047]
+        data: [9.48]
     },
     {
         name: '0.3-0.4',
-        data: [54153]
+        data: [9.00]
     },
     {
         name: '0.4-0.5',
-        data: [69674]
+        data: [11.58]
     },
     {
         name: '0.5-0.6',
-        data: [93597]
+        data: [15.56]
     },
     {
         name: '0.6-0.7',
-        data: [47816]
+        data: [7.95]
     },
     {
         name: '0.7-0.8',
-        data: [26835]
+        data: [4.46]
     },
     {
         name: '0.8-0.9',
-        data: [15520]
+        data: [2.58]
     },
     {
         name: '0.9-1',
-        data: [35350]
+        data: [5.87]
     }]
 }

@@ -6,7 +6,7 @@ export const ageGeneral = {
         text: 'General Demographics - Age of the users'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     plotOptions: {
         bar: {
@@ -35,16 +35,16 @@ export const ageGeneral = {
         colorByPoint: true,
         data: [{
             name: '18-29',
-            y: 318676
+            y: 31.15
         }, {
             name: '30-49',
-            y: 454111
+            y: 55.79
         }, {
             name: '50-65',
-            y: 36401
+            y: 4.47
         }, {
             name: '66+',
-            y: 4693
+            y: 0.57
         }]
     }]
 }
@@ -57,7 +57,7 @@ export const genderGeneral = {
         text: 'General Demographics - Gender of the users'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     colors: ["#7cb5ec", "#f15c80"],
     plotOptions: {
@@ -87,10 +87,10 @@ export const genderGeneral = {
         colorByPoint: true,
         data: [{
             name: 'Male',
-            y: 601585
+            y: 73.91
         }, {
             name: 'Female',
-            y: 212296
+            y: 26.09
         }]
     }]
 }
@@ -103,7 +103,7 @@ export const politicalGeneral = {
         text: 'General Demographics - Political affiliation of the users'
     },
     subtitle: {
-        text: 'sample subtitle'
+        text: ''
     },
     colors: ["#0062ff", "#ff2e2e"],
     plotOptions: {
@@ -133,10 +133,10 @@ export const politicalGeneral = {
         colorByPoint: true,
         data: [{
             name: 'Democrats',
-            y: 477387
+            y: 58.65
         }, {
             name: 'Republicans',
-            y: 336464
+            y: 41.35
         }]
     }]
 }
@@ -149,7 +149,7 @@ export const sentimentGeneral = {
         text: 'Sentiment analysis of the tweets'
     },
     subtitle: {
-        text: 'sample'
+        text: ''
     },
     colors: ["#ff2e2e", "#fdff7a", "#39fa3d"],
     xAxis: {
@@ -161,7 +161,7 @@ export const sentimentGeneral = {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of tweets',
+            text: 'Percentage of tweets',
         },
         labels: {
             overflow: 'justify'
@@ -190,13 +190,13 @@ export const sentimentGeneral = {
     },
     series: [{
         name: 'Negative',
-        data: [329114]
+        data: [40.43]
     }, {
         name: 'Neutral',
-        data: [162607]
+        data: [19.97]
     }, {
         name: 'Positive',
-        data: [322160]
+        data: [39.58]
     }]
 }
 
@@ -208,7 +208,7 @@ export const subjectivityGeneral = {
         text: 'Subjectivity analysis of the tweets'
     },
     subtitle: {
-        text: 'sample'
+        text: ''
     },
     colors: ["#7cb5ec"],
     xAxis: {
@@ -220,7 +220,7 @@ export const subjectivityGeneral = {
     yAxis: {
         min: 0,
         title: {
-            text: 'Number of tweets',
+            text: 'Percentage of tweets',
         },
         labels: {
             overflow: 'justify'
@@ -249,42 +249,42 @@ export const subjectivityGeneral = {
     },
     series: [{
         name: '0-0.1',
-        data: [227344]
+        data: [27.95]
     },
     {
         name: '0.1-0.2',
-        data: [40617]
+        data: [4.92]
     },
     {
         name: '0.2-0.3',
-        data: [73384]
+        data: [8.99]
     },
     {
         name: '0.3-0.4',
-        data: [72120]
+        data: [8.86]
     },
     {
         name: '0.4-0.5',
-        data: [94255]
+        data: [11.57]
     },
     {
         name: '0.5-0.6',
-        data: [127985]
+        data: [15.76]
     },
     {
         name: '0.6-0.7',
-        data: [66337]
+        data: [8.12]
     },
     {
         name: '0.7-0.8',
-        data: [37891]
+        data: [4.67]
     },
     {
         name: '0.8-0.9',
-        data: [22829]
+        data: [2.83]
     },
     {
         name: '0.9-1',
-        data: [51119]
+        data: [6.28]
     }]
 }

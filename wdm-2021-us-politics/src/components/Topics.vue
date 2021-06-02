@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h2>Emerging Topic Analysis</h2>
-    <Chart :options="getTopics" class="chart-3"/>    
+    <div style="width: 20%;margin: 0 auto;"><h2>Emerging Topic Analysis</h2></div>
+    <Chart :options="getTopics"/>    
   </div>
 </template>
 
@@ -24,16 +24,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.grid-3 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-.grid-2{
-  display: grid;
-  grid-template-columns: auto auto;
-}
 h2 {
   text-align: center;
-  margin: 150px 0 100px 0;
+  margin: 50px 0 50px 0;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: 2px solid lightblue;
+  padding: 10px;
+  border-radius:10px;
 }
 </style>

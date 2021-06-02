@@ -1,9 +1,10 @@
 <template>
   <div id="container">
     <Header @event1="selectTab"></Header>
-    <Information style="margin: auto;width: 50%;border: 3px solid green;padding: 10px;border-radius:10px" v-if="selectedTab==0"/>
+    <Information style="margin: auto;width: 50%;border: 3px solid purple;padding: 10px;border-radius:10px;background-color:rgb(232,232,232)" v-if="selectedTab==0"/>
     <Demographics v-if="selectedTab==1"/>
     <Topics v-if="selectedTab==2"/>
+    <ClusteringAndGraph v-if="selectedTab==3" />
 
   </div>
 </template>
@@ -12,6 +13,7 @@
 import Header from './components/Header.vue'
 import Demographics from './components/Demographics.vue'
 import Topics from './components/Topics.vue'
+import ClusteringAndGraph from './components/ClusteringAndGraph'
 import Information from './components/Information.vue'
 
 export default {
@@ -20,6 +22,7 @@ export default {
     Header,
     Demographics,
     Topics,
+    ClusteringAndGraph,
     Information,
   },
 
