@@ -1,13 +1,15 @@
 <template>
   <div>
     <div style="width: 20%;margin: 0 auto;"><h2>Emerging Topic Analysis</h2></div>
-    <Chart :options="getTopics"/>    
+    <Chart :options="getTopics"/> 
+    <Chart :options="getSentimentOverTime"/> 
+    <Chart :options="getPoliticalOverTime"/>
   </div>
 </template>
 
 <script>
 import { Chart } from "highcharts-vue";
-import { topics } from "../config/topics";
+import { topics, sentimentOverTime, politicalOverTime } from "../config/topics";
 
 export default {
   components: {
@@ -17,7 +19,13 @@ export default {
   computed: {
       getTopics() {
           return topics;
-      } ,   
+      } ,
+      getSentimentOverTime() {
+        return sentimentOverTime;
+      },
+      getPoliticalOverTime() {
+        return politicalOverTime;
+      }
   }
 }
 </script>

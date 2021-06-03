@@ -241,3 +241,138 @@ export const topics = {
         ]
     }]
 }
+
+export const sentimentOverTime = {
+    title: {
+        text: 'General sentiment over time periods'
+    },
+    yAxis: {
+        title: {
+            text: 'Percentage of tweets'
+        }
+    },
+    xAxis: {
+        categories: ['8 Sep-21 Sep', '22 Sep-5 Oct', '6 Oct-19 Oct', '20 Oct-2 Nov', '3 Nov-16 Nov', '17 Nov-30 Nov']
+    },
+    colors: ['green', 'orange', 'red'],
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+    plotOptions: {
+    },
+    series: [{
+        name: 'Positive',
+        data: [40.08, 38.94, 39.77, 40.24, 39.52, 38.09]
+    },{
+        name: 'Neutral',
+        data: [15.86, 20.15, 20.00, 21.59, 23.20, 19.14]
+    },{
+        name: 'Negative',
+        data: [44.05, 40.89, 40.21, 38.16, 37.26, 41.96]
+    }],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 1000
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+}
+
+export const politicalOverTime = {
+    title: {
+        text: 'Political orientation over time periods'
+    },
+    yAxis: {
+        title: {
+            text: 'Percentage of tweets'
+        }
+    },
+    xAxis: {
+        categories: ['8 Sep-21 Sep', '22 Sep-5 Oct', '6 Oct-19 Oct', '20 Oct-2 Nov', '3 Nov-16 Nov', '17 Nov-30 Nov']
+    },
+    colors: ['blue', 'red'],
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+    plotOptions: {
+    },
+    series: [{
+        name: 'Democrats',
+        data: [60.39, 62.11, 57.33, 54.89, 58.28, 58.73]
+    },{
+        name: 'Republicans',
+        data: [39.61, 37.89, 42.67, 45.10, 41.72, 41.27]
+    }],
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 1000
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+}
+
+export const mostPositivePerPeriod = {
+    chart: {
+        type: 'timeline'
+    },
+    xAxis: {
+        visible: false
+    },
+    yAxis: {
+        visible: false
+    },
+    title: {
+        text: 'Most positively talked topics per period'
+    },
+    series: [{
+        dataLabels: {
+            connectorColor: 'silver',
+            connectorWidth: 2
+        },
+        data: [{
+            name: 'WFH (work from home)',
+            label: 'make, want, go, work, like',
+            description: '8 Sep-12 Sep'
+        }, {
+            name: 'Sputnik 1',
+            label: '1957: First artificial satellite',
+            description: '4 October 1957 First artificial satellite. First signals from space.'
+        }, {
+            name: 'First human spaceflight',
+            label: '1961: First human spaceflight (Yuri Gagarin)',
+            description: 'First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight'
+        }, {
+            name: 'First human on the Moon',
+            label: '1969: First human on the Moon',
+            description: 'First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon'
+        },{
+            name: 'First human spaceflight',
+            label: '1961: First human spaceflight (Yuri Gagarin)',
+            description: 'First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight'
+        }, {
+            name: 'First human on the Moon',
+            label: '1969: First human on the Moon',
+            description: 'First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon'
+        }]
+    }]
+}

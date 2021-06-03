@@ -15,38 +15,35 @@
 
     <div class="header"><h2>Age distribution of genders</h2></div>
     <div class="row">
-      <div class="column"><Chart :options="demographicsGender[0]"/></div>
-      <div class="column"><Chart :options="demographicsGender[4]"/></div>
+      <div class="column"><Chart :options="demographicsGender[9]"/></div>
+      <!--div class="column"><Chart :options="demographicsGender[4]"/></div-->
     </div>
     
     <div class="header"><h2>Political affiliation distribution of genders</h2></div>
+    <hr>
     <div class="row">
-      <div class="column"><Chart :options="demographicsGender[1]"/></div>
-      <div class="column"><Chart :options="demographicsGender[5]"/></div>
+      <div class="column"><Chart :options="demographicsGender[8]"/></div>
+      <!--div class="column"><Chart :options="demographicsGender[5]"/></div-->
     </div>
 
     <div class="header"><h2>Sentiment distribution of genders</h2></div>
     <div class="row">
-      <div class="column"><Chart :options="demographicsGender[2]" class="chart-2"/></div>
-      <div class="column"><Chart :options="demographicsGender[6]" class="chart-2"/></div>
+      <div class="column"><Chart :options="demographicsGender[10]" class="chart-2"/></div>
     </div>
 
     <div class="header"><h2>Subjectivity distribution of genders</h2></div>
     <div class="row">
-      <div class="column"><Chart :options="demographicsGender[3]" class="chart-2"/></div>
-      <div class="column"><Chart :options="demographicsGender[7]" class="chart-2"/></div>
+      <div class="column"><Chart :options="demographicsGender[11]" class="chart-2"/></div>
     </div>
     
     <div class="header"><h2>Age distribution of parties</h2></div>
     <div class="row">
-      <div class="column"><Chart :options="demographicsPolitical[0]" class="chart-2"/></div>
-      <div class="column"><Chart :options="demographicsPolitical[4]" class="chart-2"/></div>
+      <div class="column"><Chart :options="demographicsPolitical[8]" class="chart-2"/></div>
     </div>
     
     <div class="header"><h2>Gender distribution of parties</h2></div>
     <div class="row">
-      <div class="column"><Chart :options="demographicsPolitical[1]" class="chart-2"/></div>
-      <div class="column"><Chart :options="demographicsPolitical[5]" class="chart-2"/></div>
+      <div class="column"><Chart :options="demographicsPolitical[9]" class="chart-2"/></div>
     </div>
 
     <div class="header"><h2>Sentiment distribution of parties</h2></div>
@@ -76,7 +73,11 @@ import {
   maleAge, 
   malePolitical, 
   maleSentiment, 
-  maleSubjectivity 
+  maleSubjectivity,
+  politicalGender,
+  ageGender,
+  sentimentGender, 
+  subjGender
 } from "../config/gender"
 
 import {
@@ -87,7 +88,9 @@ import {
   repAge,
   repGender,
   repSentiment,
-  repSubjectivity
+  repSubjectivity,
+  agePolitical,
+  genderPolitical
 } from "../config/political"
 
 export default {
@@ -121,7 +124,11 @@ export default {
         maleAge, 
         malePolitical, 
         maleSentiment, 
-        maleSubjectivity 
+        maleSubjectivity,
+        politicalGender,
+        ageGender,
+        sentimentGender,
+        subjGender
       ]
     },
 
@@ -134,7 +141,9 @@ export default {
         repAge, 
         repGender, 
         repSentiment, 
-        repSubjectivity 
+        repSubjectivity ,
+        agePolitical,
+        genderPolitical
       ]
     }
   }
@@ -150,17 +159,20 @@ export default {
   flex: 50%;
 }
 h2 {
-  text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 50px 0 0 50px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 2px solid lightblue;
   padding: 10px;
-  border-radius:10px;
 }
 .header {
-  width: 20%;
   margin: 0 auto;
+}
+hr {
+  width: 95%;
+  color: rgb(80, 80, 80);
+  margin-bottom: 30px;
+  height: 1px;
+  background-color: rgb(80, 80, 80);
 }
 </style>

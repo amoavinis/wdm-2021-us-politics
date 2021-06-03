@@ -487,3 +487,120 @@ export const repSubjectivity = {
         data: [6.28]
     }]
 }
+
+export const agePolitical = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of age group by political orientation'
+    },
+    xAxis: {
+        categories: ['Democrats', 'Republicans']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: '18-29',
+        data: [21.83, 17.27]
+    }, {
+        name: '30-49',
+        data: [33.98, 22.40]
+    },{
+        name: '50-65',
+        data: [2.47, 1.98]
+    }, {
+        name: '66+',
+        data: [0.26, 0.25]
+    }]
+}
+
+export const genderPolitical = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of gender by political orientation'
+    },
+    colors: ["#7cb5ec", "#f15c80"],
+    xAxis: {
+        categories: ['Democrats', 'Republicans']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'Male',
+        data: [43.90, 30.03]
+    }, {
+        name: 'Female',
+        data: [14.75, 11.32]
+    }]
+}

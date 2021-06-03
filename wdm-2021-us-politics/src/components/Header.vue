@@ -1,21 +1,31 @@
 <template>
     <div class="container">
         <div class="header">
-            <h1 style="text-align: center">US Politics Topic Detection and Demographics Analysis</h1>
-            <div style="text-align: center"> Developed by Angelos Moavinis, Asterios Bampakis, Themistoklis Spanoudis and Konstantinos Giantsios</div>
+          <div>
+          <div class="logo">Twitter Data Mining about 2020's United States Elections</div>
+          <div class="subtitle">Developed by Angelos Moavinis, Asterios Bampakis, Themistoklis Spanoudis and Konstantinos Giantsios</div>
+          </div>
+          <hr>
+          <div class="header-right">
+            <a href="#" v-on:click.prevent="emitToParent(0)">Home page</a>
+            <a href="#" v-on:click.prevent="emitToParent(1)">Demographics, sentiment and subjectivity analysis</a>
+            <a href="#" v-on:click.prevent="emitToParent(2)">Topics</a>
+            <a href="#" v-on:click.prevent="emitToParent(3)">User clustering and Retweet graph</a>
+          </div>
         </div>
-        <div class="grid-container">
-            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(0)">Home page</a></div>
+
+        <!--div class="grid-container">
+            <div class="grid-item"><a href="#" class="button" >Home page</a></div>
             <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(1)">Demographics, sentiment and subjectivity analysis</a></div>
             <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(2)">Topics</a></div>
             <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(3)">User clustering and Retweet graph</a></div>
-        </div>
+        </div-->
     </div>
 </template>
 
 <script>
 export default {
-  title: 'US Politics WDM 2021 Project',
+  title: 'Twitter Data Mining about 2020\'s United States Elections',
   methods: {
     emitToParent(event) {
       this.$emit('event1', event);
@@ -25,16 +35,6 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
 .grid-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,10 +54,56 @@ export default {
   background-color: lightgray;
 }
 .container {
-  background-color: lightblue;
   margin: 0;
   padding: 0;
   outline: 0;
   border: 0;
 }
+.header {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header {
+  font-size: 16px;
+
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: left;
+}
+
 </style>

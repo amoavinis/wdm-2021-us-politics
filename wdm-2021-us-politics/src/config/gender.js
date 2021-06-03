@@ -487,3 +487,235 @@ export const maleSubjectivity = {
         data: [5.87]
     }]
 }
+
+export const politicalGender = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of political orientation by gender'
+    },
+    colors: ["#ff2e2e", "#0062ff"],
+    xAxis: {
+        categories: ['Male', 'Female']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'Republicans',
+        data: [29.96, 11.37]
+    }, {
+        name: 'Democrats',
+        data: [43.95, 14.72]
+    }]
+}
+
+export const ageGender = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of age group by gender'
+    },
+    xAxis: {
+        categories: ['Male', 'Female']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: '18-29',
+        data: [27.10, 12.06]
+    }, {
+        name: '30-49',
+        data: [42.68, 13.12]
+    },{
+        name: '50-65',
+        data: [3.67, 0.80]
+    }, {
+        name: '66+',
+        data: [0.45, 0.12]
+    }]
+}
+
+export const sentimentGender = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of sentiment by gender'
+    },
+    colors: ["#ff2e2e", "#fdff7a", "#39fa3d"],
+    xAxis: {
+        categories: ['Male', 'Female']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'Positive',
+        data: [28.15, 11.11]
+    }, {
+        name: 'Neutral',
+        data: [15.47, 4.93]
+    },{
+        name: 'Negative',
+        data: [30.38, 9.96]
+    }]
+}
+
+export const subjGender = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of subjectivity by gender'
+    },
+    colors: ["lightblue", "orange"],
+    xAxis: {
+        categories: ['Male', 'Female']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'Objective',
+        data: [46.97, 15.39]
+    },{
+        name: 'Subjective',
+        data: [26.93, 10.71]
+    }]
+}
