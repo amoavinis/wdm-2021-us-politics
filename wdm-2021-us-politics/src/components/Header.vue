@@ -7,31 +7,57 @@
           </div>
           <hr>
           <div class="header-right">
-            <a href="#" v-on:click.prevent="emitToParent(0)">Home page</a>
-            <a href="#" v-on:click.prevent="emitToParent(1)">Demographics, sentiment and subjectivity analysis</a>
-            <a href="#" v-on:click.prevent="emitToParent(2)">Topics</a>
-            <a href="#" v-on:click.prevent="emitToParent(3)">User clustering and Retweet graph</a>
+            <a href="#" v-on:click.prevent="emitToParent(0)" :class="selectedTab==0?'active':'not-selected'">
+              <span >
+                Home page
+              </span>
+            </a>
+            <a href="#" v-on:click.prevent="emitToParent(1)" :class="selectedTab==1?'active':'not-selected'">
+              <span >
+                Demographics, sentiment and subjectivity analysis
+              </span>
+            </a>
+            <a href="#" v-on:click.prevent="emitToParent(2)" :class="selectedTab==2?'active':'not-selected'">
+              <span >
+                Topics
+              </span>
+            </a>
+            <a href="#" v-on:click.prevent="emitToParent(3)" :class="selectedTab==3?'active':'not-selected'">
+              <span >
+                User clustering
+              </span>
+            </a>
+            <a href="#" v-on:click.prevent="emitToParent(4)" :class="selectedTab==4?'active':'not-selected'">
+              <span >
+                Graph analysis
+              </span>
+            </a>
+            <a href="#" v-on:click.prevent="emitToParent(5)" :class="selectedTab==5?'active':'not-selected'">
+              <span >
+                Datasets and Models
+              </span>
+            </a>
           </div>
         </div>
-
-        <!--div class="grid-container">
-            <div class="grid-item"><a href="#" class="button" >Home page</a></div>
-            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(1)">Demographics, sentiment and subjectivity analysis</a></div>
-            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(2)">Topics</a></div>
-            <div class="grid-item"><a href="#" class="button" v-on:click.prevent="emitToParent(3)">User clustering and Retweet graph</a></div>
-        </div-->
     </div>
 </template>
 
 <script>
 export default {
-  title: 'Twitter Data Mining about 2020\'s United States Elections',
+  data: () => {
+    return {
+      selectedTab: 0,
+    };
+  },
+
+  title: "Twitter Data Mining about 2020's United States Elections",
   methods: {
     emitToParent(event) {
-      this.$emit('event1', event);
-    }
+      this.$emit("event1", event);
+      this.selectedTab = event;
+    },
   },
-}
+};
 </script>
 
 <style scoped>
@@ -50,7 +76,7 @@ export default {
   font-size: 18px;
   border: 2px solid purple;
   padding: 2px;
-  border-radius:10px;
+  border-radius: 10px;
   background-color: lightgray;
 }
 .container {
@@ -77,7 +103,7 @@ export default {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
 }
@@ -89,7 +115,6 @@ export default {
 
 .header {
   font-size: 16px;
-
 }
 
 .header a:hover {
@@ -102,8 +127,11 @@ export default {
   color: white;
 }
 
+.not-selected {
+
+}
+
 .header-right {
   float: left;
 }
-
 </style>

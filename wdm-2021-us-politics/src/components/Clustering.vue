@@ -1,30 +1,21 @@
 <template>
-    <div>
-        <div style="width: 20%;margin: 0 auto;"><h2>Clustering quality metrics</h2></div>
+    <div style="align-content:center;">
+        <div class="header"><h2>Clustering quality metrics</h2></div>
+        <hr>
+        <div>
+            <Chart :options="getInertia"/>
+            <Chart :options="getDaviesBouldin"/>
+            <Chart :options="getKalinskiHarabasz"/>
+        </div>
         
-        <div style="width: 20%;margin: 0 auto;"><h3>Inertia clustering metric</h3></div>
-        <Chart :options="getInertia"/>
-        
-        <div style="width: 20%;margin: 0 auto;"><h3>Davies-Bouldin clustering metric</h3></div>
-        <Chart :options="getDaviesBouldin"/>
-        
-        <div style="width: 20%;margin: 0 auto;"><h3>Kalinki-Harabasz clustering metric</h3></div>
-        <Chart :options="getKalinskiHarabasz"/>
-
-        <div style="width: 20%;margin: 0 auto;"><h2>User clusters wordclouds</h2></div>
-        
-        <div style="width: 20%;margin: 0 auto;"><h3>Cluster 1</h3></div>
+        <div class="header"><h2>User clusters wordclouds</h2></div>
+        <hr>
+        <h3>Cluster 1</h3>
         <div class="image"><img src="@/assets/cluster_1.png" alt=""></div>
-        
-        <div style="width: 20%;margin: 0 auto;"><h3>Cluster 2</h3></div>
+        <h3>Cluster 2</h3>
         <div class="image"><img src="@/assets/cluster_2.png" alt=""></div>
-        
-        <div style="width: 20%;margin: 0 auto;"><h3>Cluster 3</h3></div>
+        <h3>Cluster 3</h3>
         <div class="image"><img src="@/assets/cluster_3.png" alt=""></div>
-
-
-        <div style="width: 20%;margin: 0 auto;"><h3>Retweet graph</h3></div>
-        <div class="image"><img src="@/assets/retweet-graph.png" alt=""></div>
     </div>
 </template>
 
@@ -55,14 +46,21 @@ export default {
 
 <style scoped>
 h2 {
-  text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 50px 0 0 50px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 2px solid lightblue;
   padding: 10px;
-  border-radius:10px;
+}
+.header {
+  margin: 0 auto;
+}
+hr {
+  width: 95%;
+  color: rgb(80, 80, 80);
+  margin-bottom: 30px;
+  height: 1px;
+  background-color: rgb(80, 80, 80);
 }
 h3 {
   text-align: center;
@@ -70,9 +68,6 @@ h3 {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 2px solid lightblue;
-  padding: 10px;
-  border-radius:10px;
 }
 img{
   display: block;
