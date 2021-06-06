@@ -100,7 +100,7 @@ export const politicalGeneral = {
         type: 'pie',
     },
     title: {
-        text: 'General Demographics - Political affiliation of the users'
+        text: 'General Demographics - Political orientation of the users'
     },
     subtitle: {
         text: ''
