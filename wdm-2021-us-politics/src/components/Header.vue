@@ -32,11 +32,6 @@
                 Graph analysis
               </span>
             </a>
-            <a href="#" v-on:click.prevent="emitToParent(5)" :class="selectedTab==5?'active':'not-selected'">
-              <span >
-                Datasets and Models
-              </span>
-            </a>
           </div>
         </div>
     </div>

@@ -8,7 +8,7 @@ export const topics = {
     },
     tooltip: {
         useHTML: true,
-        pointFormat: '<b>{point.name}</b> <br> <b>political Orientation:</b> {point.political}<br><b>sentiment:</b> {point.sentiment}<br>\
+        pointFormat: '<b>{point.name}</b> <br> <b>Political Orientation:</b> {point.political}<br><b>Sentiment:</b> {point.sentiment}<br>\
         <b>Most representative words:</b>{point.representativeWords}'
     },
     plotOptions: {
@@ -36,6 +36,108 @@ export const topics = {
         }
     },
     series: [{
+        name: 'Period 6 - from 17 Nov to 30 Nov',
+        data: [{
+            name: 'Stop counting/recount movement',
+            political: 'Democrats -> 15285, Republicans->12934',
+            sentiment: 'pos -> 10482, neg -> 11671, neu -> 6066',
+            representativeWords: 'ballot, georgia, court, count, recount',
+            value: 28219
+        }, {
+            name: "Biden's goals & message for unity",
+            political: 'Democrats -> 12644, Republicans->7221',
+            sentiment: 'pos -> 7738, neg -> 9158, neu -> 2969',
+            representativeWords: 'make, year, life ,people, american',
+            value: 19865
+        }, {
+            name: "Biden's goals message for unity",
+            political: 'Democrats -> 21456, Republicans->13464',
+            sentiment: 'pos -> 15004, neg -> 14227, neu -> 5689',
+            representativeWords: 'like, people, want, care, support',
+            value: 34920
+        }, {
+            name: 'Voting fraud claims',
+            political: 'Democrats -> 10189, Republicans->10011',
+            sentiment: 'pos -> 5810, neg -> 9508, neu -> 4882',
+            representativeWords: 'fraud, evid, votter, claim, legal',
+            value: 20200
+        }, {
+            name: 'Trump starts giving pardons (Comparison with Obama)',
+            political: 'Democrats -> 14969, Republicans->8750',
+            sentiment: 'pos -> 10342, neg -> 8695, neu -> 4682',
+            representativeWords: 'pardon, obama, flynn, state',
+            value: 23719
+        },
+        ]
+    }, {
+        name: 'Period 5 - from 3 Nov to 16 Nov',
+        data: [{
+            name: "Ballot's counting",
+            political: 'Democrats -> 23700, Republicans->17544',
+            sentiment: 'pos -> 14455, neg -> 17329, neu -> 9460',
+            representativeWords: 'ballot, count. state, fraud, win',
+            value: 41244
+        }, {
+            name: 'Theories of vote fraud"',
+            political: 'Democrats -> 8388, Republicans->9410',
+            sentiment: 'pos -> 4508, neg -> 5738, neu -> 7552',
+            representativeWords: 'donald, president, fraud',
+            value: 17798
+        }, {
+            name: 'Senate election battle',
+            political: 'Democrats -> 19031, Republicans->11816',
+            sentiment: 'pos -> 15092, neg -> 10656, neu -> 5099',
+            representativeWords: 'senat, american, peopl, need',
+            value: 30847
+        }, {
+            name: "Biden's goals/comitments",
+            political: 'Democrats -> 11658, Republicans-> 8725',
+            sentiment: 'pos -> 9819, neg -> 7012, neu -> 3552',
+            representativeWords: '',
+            value: 20383
+        }, {
+            name: 'Kamala Harris first woman in office',
+            political: 'Democrats -> 13930, Republicans-> 7410',
+            sentiment: 'pos -> 8312, neg -> 8147, neu -> 4881',
+            representativeWords: 'watch, first, offic, victori, woman',
+            value: 21340
+        },
+        ]
+    }, {
+        name: 'Period 4 - from 20 Oct to 2 Nov',
+        data: [{
+            name: 'Trump and Biden final debate',
+            political: 'Democrats -> 21104, Republicans->12638',
+            sentiment: 'pos -> 12011, neg -> 14970, neu -> 6761',
+            representativeWords: 'american, debate, covid, countri',
+            value: 33742
+        }, {
+            name: 'Biden campaign to Texas',
+            political: 'Democrats -> 10336, Republicans->9534',
+            sentiment: 'pos -> 6699, neg -> 8641, neu -> 4530',
+            representativeWords: 'campaign, texas, voter, million',
+            value: 19870
+        }, {
+            name: 'Supporting or not Kamala Harris"',
+            political: 'Democrats -> 13269, Republicans->10373',
+            sentiment: 'pos -> 9200, neg -> 9583, neu -> 4859',
+            representativeWords: 'support, like, kamala, shut',
+            value: 23642
+        }, {
+            name: 'Hunter Biden and his China business dealings',
+            political: 'Democrats -> 12059, Republicans->10933',
+            sentiment: 'pos -> 8313, neg -> 8329, neu -> 6350',
+            representativeWords: 'hunter, china, famili, laptop',
+            value: 22992
+        }, {
+            name: 'Elections forecasts',
+            political: 'Democrats -> 17474, Republicans->15462',
+            sentiment: 'pos -> 17372, neg -> 9301, neu -> 6263',
+            representativeWords: 'elect, ballot, make',
+            value: 32936
+        },
+        ]
+    }, {
         name: 'Period 1 - from 8 Sept to 21 Sept',
         data: [{
             name: "State Houses' responses for COVID",
@@ -69,7 +171,7 @@ export const topics = {
             value: 27294
         },
         ]
-    }, {
+    },  {
         name: 'Period 2 - from 22 Sept to 5 Oct',
         data: [{
             name: 'Supreme Court Justice replacement Amy Coney Barrett',
@@ -135,108 +237,6 @@ export const topics = {
             sentiment: 'pos -> 10537, neg -> 9317, neu -> 4639',
             representativeWords: 'ballot, court, state, confirm',
             value: 24493
-        },
-        ]
-    }, {
-        name: 'Period 4 - from 20 Oct to 2 Nov',
-        data: [{
-            name: 'Trump and Biden final debate',
-            political: 'Democrats -> 21104, Republicans->12638',
-            sentiment: 'pos -> 12011, neg -> 14970, neu -> 6761',
-            representativeWords: 'american, debate, covid, countri',
-            value: 33742
-        }, {
-            name: 'Biden campaign to Texas',
-            political: 'Democrats -> 10336, Republicans->9534',
-            sentiment: 'pos -> 6699, neg -> 8641, neu -> 4530',
-            representativeWords: 'campaign, texas, voter, million',
-            value: 19870
-        }, {
-            name: 'Supporting or not Kamala Harris"',
-            political: 'Democrats -> 13269, Republicans->10373',
-            sentiment: 'pos -> 9200, neg -> 9583, neu -> 4859',
-            representativeWords: 'support, like, kamala, shut',
-            value: 23642
-        }, {
-            name: 'Hunter Biden and his China business dealings',
-            political: 'Democrats -> 12059, Republicans->10933',
-            sentiment: 'pos -> 8313, neg -> 8329, neu -> 6350',
-            representativeWords: 'hunter, china, famili, laptop',
-            value: 22992
-        }, {
-            name: 'Elections forecasts',
-            political: 'Democrats -> 17474, Republicans->15462',
-            sentiment: 'pos -> 17372, neg -> 9301, neu -> 6263',
-            representativeWords: 'elect, ballot, make',
-            value: 32936
-        },
-        ]
-    },  {
-        name: 'Period 5 - from 3 Nov to 16 Nov',
-        data: [{
-            name: "Ballot's counting",
-            political: 'Democrats -> 23700, Republicans->17544',
-            sentiment: 'pos -> 14455, neg -> 17329, neu -> 9460',
-            representativeWords: 'ballot, count. state, fraud, win',
-            value: 41244
-        }, {
-            name: 'Theories of vote fraud"',
-            political: 'Democrats -> 8388, Republicans->9410',
-            sentiment: 'pos -> 4508, neg -> 5738, neu -> 7552',
-            representativeWords: 'donald, president, fraud',
-            value: 17798
-        }, {
-            name: 'Senate election battle',
-            political: 'Democrats -> 19031, Republicans->11816',
-            sentiment: 'pos -> 15092, neg -> 10656, neu -> 5099',
-            representativeWords: 'senat, american, peopl, need',
-            value: 30847
-        }, {
-            name: "Biden's goals/comitments",
-            political: 'Democrats -> 11658, Republicans-> 8725',
-            sentiment: 'pos -> 9819, neg -> 7012, neu -> 3552',
-            representativeWords: '',
-            value: 20383
-        }, {
-            name: 'Kamala Harris first woman in office',
-            political: 'Democrats -> 13930, Republicans-> 7410',
-            sentiment: 'pos -> 8312, neg -> 8147, neu -> 4881',
-            representativeWords: 'watch, first, offic, victori, woman',
-            value: 21340
-        },
-        ]
-    }, {
-        name: 'Period 6 - from 17 Nov to 30 Nov',
-        data: [{
-            name: 'Stop counting/recount movement',
-            political: 'Democrats -> 15285, Republicans->12934',
-            sentiment: 'pos -> 10482, neg -> 11671, neu -> 6066',
-            representativeWords: 'ballot, georgia, court, count, recount',
-            value: 28219
-        }, {
-            name: "Biden's goals & message for unity",
-            political: 'Democrats -> 12644, Republicans->7221',
-            sentiment: 'pos -> 7738, neg -> 9158, neu -> 2969',
-            representativeWords: 'make, year, life ,people, american',
-            value: 19865
-        }, {
-            name: "Biden's goals message for unity",
-            political: 'Democrats -> 21456, Republicans->13464',
-            sentiment: 'pos -> 15004, neg -> 14227, neu -> 5689',
-            representativeWords: 'like, people, want, care, support',
-            value: 34920
-        }, {
-            name: 'Voting fraud claims',
-            political: 'Democrats -> 10189, Republicans->10011',
-            sentiment: 'pos -> 5810, neg -> 9508, neu -> 4882',
-            representativeWords: 'fraud, evid, votter, claim, legal',
-            value: 20200
-        }, {
-            name: 'Trump starts giving pardons (Comparison with Obama)',
-            political: 'Democrats -> 14969, Republicans->8750',
-            sentiment: 'pos -> 10342, neg -> 8695, neu -> 4682',
-            representativeWords: 'pardon, obama, flynn, state',
-            value: 23719
         },
         ]
     },]

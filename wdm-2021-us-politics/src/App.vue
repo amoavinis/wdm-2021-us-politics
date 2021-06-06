@@ -7,7 +7,6 @@
     <Topics v-if="selectedTab==2"/>
     <Clustering v-if="selectedTab==3" />
     <GraphAnalysis v-if="selectedTab==4"/>
-    <DatasetsAndModels v-if="selectedTab==5"/>
 
   </div>
 </template>
@@ -19,7 +18,6 @@ import Topics from './components/Topics.vue'
 import Clustering from './components/Clustering'
 import Information from './components/Information.vue'
 import GraphAnalysis from './components/GraphAnalysis.vue'
-import DatasetsAndModels from './components/DatasetsAndModels'
 import { ParticlesBg } from "particles-bg-vue";
 
 export default {
@@ -32,7 +30,6 @@ export default {
     Clustering,
     Information,
     GraphAnalysis,
-    DatasetsAndModels,
   },
 
   data: () => {

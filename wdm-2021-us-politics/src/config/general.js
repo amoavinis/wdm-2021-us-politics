@@ -210,7 +210,7 @@ export const subjectivityGeneral = {
     subtitle: {
         text: ''
     },
-    colors: ["#7cb5ec"],
+    colors: ["lightblue", "orange"],
     xAxis: {
         categories: ['Subjectivity'],
         title: {
@@ -248,43 +248,11 @@ export const subjectivityGeneral = {
         enabled: false
     },
     series: [{
-        name: '0-0.1',
-        data: [27.95]
+        name: 'Objective',
+        data: [62.29]
     },
     {
-        name: '0.1-0.2',
-        data: [4.92]
-    },
-    {
-        name: '0.2-0.3',
-        data: [8.99]
-    },
-    {
-        name: '0.3-0.4',
-        data: [8.86]
-    },
-    {
-        name: '0.4-0.5',
-        data: [11.57]
-    },
-    {
-        name: '0.5-0.6',
-        data: [15.76]
-    },
-    {
-        name: '0.6-0.7',
-        data: [8.12]
-    },
-    {
-        name: '0.7-0.8',
-        data: [4.67]
-    },
-    {
-        name: '0.8-0.9',
-        data: [2.83]
-    },
-    {
-        name: '0.9-1',
-        data: [6.28]
+        name: 'Subjective',
+        data: [37.71]
     }]
 }
