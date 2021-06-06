@@ -3,10 +3,10 @@
         <div class="textbox">
             <div class="text">
                 <div>This web application was built to supplement a project for the MSc Data and Web Science by the Aristotle University of Thessaloniki's
-                Department of Informatics.</div>
+                Department of Informatics.</div><br>
                 <div>Our team collected data from Twitter and CrowdTangle to build and train Machine Learning models in order to predict demographic features
                 of Twitter users that talk about US politics and to detect the emerging/trending topics in the months leading up to the election and a 
-                few weeks after it.</div>
+                few weeks after it.</div><br>
                 <div>The results of our study can be seen in this site. If you want to access our code, please click 
                     <a target="_blank" href="https://github.com/stergiosbamp/us-politics-analysis">here</a>.
                 </div>
