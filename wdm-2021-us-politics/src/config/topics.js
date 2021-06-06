@@ -1,7 +1,7 @@
 export const topics = {
     chart: {
         type: 'packedbubble',
-        //height: '100%'
+        //width: '50%'
     },
     title: {
         text: 'Emerging(trending) topics on Twitter regarding US Politics'
@@ -13,10 +13,10 @@ export const topics = {
     },
     plotOptions: {
         packedbubble: {
-            minSize: '20%',
-            maxSize: '100%',
-            zMin: 0,
-            zMax: 1000,
+            minSize: '50%',
+            maxSize: '200%',
+            zMin: 17798,
+            zMax: 42000,
             layoutAlgorithm: {
                 gravitationalConstant: 0.05,
                 splitSeries: true,
@@ -104,37 +104,37 @@ export const topics = {
         },
         ]
     }, {
-        name: 'Period 3 - from 6 Oct to 19 Oct',
+        name: 'Period 4 - from 20 Oct to 2 Nov',
         data: [{
-            name: 'Affordable Care Act (Obamacare) in Supreme Court',
-            political: 'Democrats -> 19786, Republicans->12513',
-            sentiment: 'pos -> 13167, neg -> 13309, neu -> 5823',
-            representativeWords: 'american, care, court, health',
-            value: 32299
+            name: 'Trump and Biden final debate',
+            political: 'Democrats -> 21104, Republicans->12638',
+            sentiment: 'pos -> 12011, neg -> 14970, neu -> 6761',
+            representativeWords: 'american, debate, covid, countri',
+            value: 33742
         }, {
-            name: 'The first Vice Presidential debate',
-            political: 'Democrats -> 18272, Republicans->10776',
-            sentiment: 'pos -> 12093, neg -> 11038, neu -> 5917',
-            representativeWords: 'penc, kamala, harri, mike',
-            value: 29048
+            name: 'Biden campaign to Texas',
+            political: 'Democrats -> 10336, Republicans->9534',
+            sentiment: 'pos -> 6699, neg -> 8641, neu -> 4530',
+            representativeWords: 'campaign, texas, voter, million',
+            value: 19870
         }, {
-            name: "Trump & Biden's Duelling Town Halls",
-            political: 'Democrats -> 15489, Republicans->11555',
-            sentiment: 'pos -> 11290, neg -> 10308, neu -> 5446',
-            representativeWords: 'town, hall, ralli',
-            value: 27044
+            name: 'Supporting or not Kamala Harris"',
+            political: 'Democrats -> 13269, Republicans->10373',
+            sentiment: 'pos -> 9200, neg -> 9583, neu -> 4859',
+            representativeWords: 'support, like, kamala, shut',
+            value: 23642
         }, {
-            name: 'Hunter Biden emails to Ukrainian Businessman',
-            political: 'Democrats -> 16859, Republicans->13343',
-            sentiment: 'pos -> 9832, neg -> 13569, neu -> 6801',
-            representativeWords: 'hunter, email, russian, report',
-            value: 30202
+            name: 'Hunter Biden and his China business dealings',
+            political: 'Democrats -> 12059, Republicans->10933',
+            sentiment: 'pos -> 8313, neg -> 8329, neu -> 6350',
+            representativeWords: 'hunter, china, famili, laptop',
+            value: 22992
         }, {
-            name: 'Supreme Court decisions about ballots',
-            political: 'Democrats -> 11626, Republicans->12867',
-            sentiment: 'pos -> 10537, neg -> 9317, neu -> 4639',
-            representativeWords: 'ballot, court, state, confirm',
-            value: 24493
+            name: 'Elections forecasts',
+            political: 'Democrats -> 17474, Republicans->15462',
+            sentiment: 'pos -> 17372, neg -> 9301, neu -> 6263',
+            representativeWords: 'elect, ballot, make',
+            value: 32936
         },
         ]
     }, {
@@ -171,7 +171,7 @@ export const topics = {
             value: 27294
         },
         ]
-    }, {
+    },  {
         name: 'Period 2 - from 22 Sept to 5 Oct',
         data: [{
             name: 'Supreme Court Justice replacement Amy Coney Barrett',
@@ -206,40 +206,40 @@ export const topics = {
         },
         ]
     }, {
-        name: 'Period 4 - from 20 Oct to 2 Nov',
+        name: 'Period 3 - from 6 Oct to 19 Oct',
         data: [{
-            name: 'Trump and Biden final debate',
-            political: 'Democrats -> 21104, Republicans->12638',
-            sentiment: 'pos -> 12011, neg -> 14970, neu -> 6761',
-            representativeWords: 'american, debate, covid, countri',
-            value: 33742
+            name: 'Affordable Care Act (Obamacare) in Supreme Court',
+            political: 'Democrats -> 19786, Republicans->12513',
+            sentiment: 'pos -> 13167, neg -> 13309, neu -> 5823',
+            representativeWords: 'american, care, court, health',
+            value: 32299
         }, {
-            name: 'Biden campaign to Texas',
-            political: 'Democrats -> 10336, Republicans->9534',
-            sentiment: 'pos -> 6699, neg -> 8641, neu -> 4530',
-            representativeWords: 'campaign, texas, voter, million',
-            value: 19870
+            name: 'The first Vice Presidential debate',
+            political: 'Democrats -> 18272, Republicans->10776',
+            sentiment: 'pos -> 12093, neg -> 11038, neu -> 5917',
+            representativeWords: 'penc, kamala, harri, mike',
+            value: 29048
         }, {
-            name: 'Supporting or not Kamala Harris"',
-            political: 'Democrats -> 13269, Republicans->10373',
-            sentiment: 'pos -> 9200, neg -> 9583, neu -> 4859',
-            representativeWords: 'support, like, kamala, shut',
-            value: 23642
+            name: "Trump & Biden's Duelling Town Halls",
+            political: 'Democrats -> 15489, Republicans->11555',
+            sentiment: 'pos -> 11290, neg -> 10308, neu -> 5446',
+            representativeWords: 'town, hall, ralli',
+            value: 27044
         }, {
-            name: 'Hunter Biden and his China business dealings',
-            political: 'Democrats -> 12059, Republicans->10933',
-            sentiment: 'pos -> 8313, neg -> 8329, neu -> 6350',
-            representativeWords: 'hunter, china, famili, laptop',
-            value: 22992
+            name: 'Hunter Biden emails to Ukrainian Businessman',
+            political: 'Democrats -> 16859, Republicans->13343',
+            sentiment: 'pos -> 9832, neg -> 13569, neu -> 6801',
+            representativeWords: 'hunter, email, russian, report',
+            value: 30202
         }, {
-            name: 'Elections forecasts',
-            political: 'Democrats -> 17474, Republicans->15462',
-            sentiment: 'pos -> 17372, neg -> 9301, neu -> 6263',
-            representativeWords: 'elect, ballot, make',
-            value: 32936
+            name: 'Supreme Court decisions about ballots',
+            political: 'Democrats -> 11626, Republicans->12867',
+            sentiment: 'pos -> 10537, neg -> 9317, neu -> 4639',
+            representativeWords: 'ballot, court, state, confirm',
+            value: 24493
         },
         ]
-    }]
+    },]
 }
 
 export const sentimentOverTime = {
@@ -329,50 +329,4 @@ export const politicalOverTime = {
             }
         }]
     }
-}
-
-export const mostPositivePerPeriod = {
-    chart: {
-        type: 'timeline'
-    },
-    xAxis: {
-        visible: false
-    },
-    yAxis: {
-        visible: false
-    },
-    title: {
-        text: 'Most positively talked topics per period'
-    },
-    series: [{
-        dataLabels: {
-            connectorColor: 'silver',
-            connectorWidth: 2
-        },
-        data: [{
-            name: 'WFH (work from home)',
-            label: 'make, want, go, work, like',
-            description: '8 Sep-12 Sep'
-        }, {
-            name: 'Sputnik 1',
-            label: '1957: First artificial satellite',
-            description: '4 October 1957 First artificial satellite. First signals from space.'
-        }, {
-            name: 'First human spaceflight',
-            label: '1961: First human spaceflight (Yuri Gagarin)',
-            description: 'First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight'
-        }, {
-            name: 'First human on the Moon',
-            label: '1969: First human on the Moon',
-            description: 'First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon'
-        },{
-            name: 'First human spaceflight',
-            label: '1961: First human spaceflight (Yuri Gagarin)',
-            description: 'First human spaceflight (Yuri Gagarin), and the first human-crewed orbital flight'
-        }, {
-            name: 'First human on the Moon',
-            label: '1969: First human on the Moon',
-            description: 'First human on the Moon, and first space launch from a celestial body other than the Earth. First sample return from the Moon'
-        }]
-    }]
 }

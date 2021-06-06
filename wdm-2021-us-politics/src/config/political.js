@@ -604,3 +604,118 @@ export const genderPolitical = {
         data: [14.75, 11.32]
     }]
 }
+
+export const sentimentPolitical = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of sentiment by political orientation'
+    },
+    colors: ["#39fa3d", "#fdff7a", "#ff2e2e"],
+    xAxis: {
+        categories: ['Democrats', 'Republicans']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'Positive',
+        data: [22.87, 16.73]
+    }, {
+        name: 'Neutral',
+        data: [10.33, 9.60]
+    },{
+        name: 'Negative',
+        data: [25.46, 15.01]
+    }]
+}
+
+export const subjPolitical = {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Distribution of subjectivity by political orientation'
+    },
+    colors: ["lightblue", "orange"],
+    xAxis: {
+        categories: ['Democrats', 'Republicans']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Percentage'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor: 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'Objective',
+        data: [35.37, 26.98]
+    },{
+        name: 'Subjective',
+        data: [23.28, 14.37]
+    }]
+}

@@ -1,79 +1,46 @@
 <template>
   <div style="align-content:center;">
     <div class="header"><h2>General Demographics</h2></div>
+    <hr>
     <div class="row">
       <div class="column"><Chart :options="demographicsAgeGeneral"/></div>
       <div class="column"><Chart :options="demographicsGenderGeneral"/></div>
+      <div class="column"><Chart :options="demographicsPoliticalGeneral"/></div>
     </div>
-    <Chart :options="demographicsPoliticalGeneral"/>
     
-    <div class="header"><h2>Sentiment and Subjectivity - General</h2></div>
     <div class="row">
       <div class="column"><Chart :options="sentimentSubjectivity[0]"/></div>
       <div class="column"><Chart :options="sentimentSubjectivity[1]"/></div>
     </div>
 
-    <div class="header"><h2>Age distribution of genders</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsGender[9]"/></div>
-      <!--div class="column"><Chart :options="demographicsGender[4]"/></div-->
-    </div>
-    
-    <div class="header"><h2>Political affiliation distribution of genders</h2></div>
+    <div class="header"><h2>Demographics based on gender</h2></div>
     <hr>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsGender[8]"/></div>
-      <!--div class="column"><Chart :options="demographicsGender[5]"/></div-->
-    </div>
+    <div class="column"><Chart :options="demographicsGender[0]"/></div>
+    <div class="column"><Chart :options="demographicsGender[1]"/></div>
+    <div class="column"><Chart :options="demographicsGender[2]"/></div>
+    <div class="column"><Chart :options="demographicsGender[3]"/></div>
 
-    <div class="header"><h2>Sentiment distribution of genders</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsGender[10]" class="chart-2"/></div>
-    </div>
-
-    <div class="header"><h2>Subjectivity distribution of genders</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsGender[11]" class="chart-2"/></div>
-    </div>
-    
-    <div class="header"><h2>Age distribution of parties</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsPolitical[8]" class="chart-2"/></div>
-    </div>
-    
-    <div class="header"><h2>Gender distribution of parties</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsPolitical[9]" class="chart-2"/></div>
-    </div>
-
-    <div class="header"><h2>Sentiment distribution of parties</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsPolitical[2]" class="chart-2"/></div>
-      <div class="column"><Chart :options="demographicsPolitical[6]" class="chart-2"/></div>
-    </div>
-
-    <div class="header"><h2>Subjectivity distribution of parties</h2></div>
-    <div class="row">
-      <div class="column"><Chart :options="demographicsPolitical[3]" class="chart-2"/></div>
-      <div class="column"><Chart :options="demographicsPolitical[7]" class="chart-2"/></div>
-    </div>
-    
+    <div class="header"><h2>Demographics based on political orientation</h2></div>
+    <hr>
+    <div class="column"><Chart :options="demographicsPolitical[0]"/></div>
+    <div class="column"><Chart :options="demographicsPolitical[1]"/></div>
+    <div class="column"><Chart :options="demographicsPolitical[2]"/></div>
+    <div class="column"><Chart :options="demographicsPolitical[3]"/></div>
 
   </div>
 </template>
 
 <script>
 import { Chart } from "highcharts-vue";
-import { ageGeneral, genderGeneral, politicalGeneral, sentimentGeneral, subjectivityGeneral } from "../config/general"
 import { 
-  femaleAge, 
-  femalePolitical, 
-  femaleSentiment, 
-  femaleSubjectivity, 
-  maleAge, 
-  malePolitical, 
-  maleSentiment, 
-  maleSubjectivity,
+  ageGeneral, 
+  genderGeneral, 
+  politicalGeneral, 
+  sentimentGeneral, 
+  subjectivityGeneral 
+} from "../config/general"
+
+import { 
   politicalGender,
   ageGender,
   sentimentGender, 
@@ -81,16 +48,10 @@ import {
 } from "../config/gender"
 
 import {
-  demAge,
-  demGender,
-  demSentiment,
-  demSubjectivity,
-  repAge,
-  repGender,
-  repSentiment,
-  repSubjectivity,
+  genderPolitical,
   agePolitical,
-  genderPolitical
+  sentimentPolitical,
+  subjPolitical
 } from "../config/political"
 
 export default {
@@ -117,14 +78,6 @@ export default {
 
     demographicsGender() {
       return [
-        femaleAge, 
-        femalePolitical, 
-        femaleSentiment, 
-        femaleSubjectivity, 
-        maleAge, 
-        malePolitical, 
-        maleSentiment, 
-        maleSubjectivity,
         politicalGender,
         ageGender,
         sentimentGender,
@@ -134,16 +87,10 @@ export default {
 
     demographicsPolitical() {
       return [
-        demAge, 
-        demGender, 
-        demSentiment, 
-        demSubjectivity, 
-        repAge, 
-        repGender, 
-        repSentiment, 
-        repSubjectivity ,
         agePolitical,
-        genderPolitical
+        genderPolitical,
+        sentimentPolitical,
+        subjPolitical
       ]
     }
   }
@@ -156,7 +103,7 @@ export default {
   display: flex;
 }
 .column {
-  flex: 50%;
+  flex: 33%;
 }
 h2 {
   margin: 50px 0 0 50px;

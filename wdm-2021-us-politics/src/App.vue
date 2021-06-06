@@ -1,10 +1,12 @@
 <template>
   <div id="container">
+    <particles-bg type="cobweb" color="white" :bg="true" />
     <Header @event1="selectTab"></Header>
-    <Information style="margin: auto;width: 50%;border: 3px solid purple;padding: 10px;border-radius:10px;background-color:rgb(232,232,232)" v-if="selectedTab==0"/>
+    <Information v-if="selectedTab==0"/>
     <Demographics v-if="selectedTab==1"/>
     <Topics v-if="selectedTab==2"/>
-    <ClusteringAndGraph v-if="selectedTab==3" />
+    <Clustering v-if="selectedTab==3" />
+    <GraphAnalysis v-if="selectedTab==4"/>
 
   </div>
 </template>
@@ -13,17 +15,21 @@
 import Header from './components/Header.vue'
 import Demographics from './components/Demographics.vue'
 import Topics from './components/Topics.vue'
-import ClusteringAndGraph from './components/ClusteringAndGraph'
+import Clustering from './components/Clustering'
 import Information from './components/Information.vue'
+import GraphAnalysis from './components/GraphAnalysis.vue'
+import { ParticlesBg } from "particles-bg-vue";
 
 export default {
   name: 'App',
   components: {
+    ParticlesBg,
     Header,
     Demographics,
     Topics,
-    ClusteringAndGraph,
+    Clustering,
     Information,
+    GraphAnalysis,
   },
 
   data: () => {

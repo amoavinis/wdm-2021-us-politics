@@ -612,7 +612,7 @@ export const sentimentGender = {
     title: {
         text: 'Distribution of sentiment by gender'
     },
-    colors: ["#ff2e2e", "#fdff7a", "#39fa3d"],
+    colors: ["#39fa3d", "#fdff7a", "#ff2e2e"],
     xAxis: {
         categories: ['Male', 'Female']
     },

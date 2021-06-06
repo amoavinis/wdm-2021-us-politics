@@ -1,9 +1,17 @@
 <template>
-  <div>
-    <div style="width: 20%;margin: 0 auto;"><h2>Emerging Topic Analysis</h2></div>
-    <Chart :options="getTopics"/> 
-    <Chart :options="getSentimentOverTime"/> 
-    <Chart :options="getPoliticalOverTime"/>
+  <div style="align-content:center;">
+    <div class="header"><h2>Emerging Topic Analysis</h2></div>
+    <hr>
+    <div>
+      <Chart :options="getTopics"/>
+    </div>
+
+    <div class="header"><h2>Sentiment and Political orientation over time</h2></div>
+    <hr>
+    <div>
+      <Chart :options="getSentimentOverTime"/> 
+      <Chart :options="getPoliticalOverTime"/>
+    </div>
   </div>
 </template>
 
@@ -32,14 +40,28 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.row {
+  display: flex;
+}
+.column {
+  flex: 33%;
+}
 h2 {
-  text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 50px 0 0 50px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  border: 2px solid lightblue;
   padding: 10px;
-  border-radius:10px;
 }
+.header {
+  margin: 0 auto;
+}
+hr {
+  width: 95%;
+  color: rgb(80, 80, 80);
+  margin-bottom: 30px;
+  height: 1px;
+  background-color: rgb(80, 80, 80);
+}
+
 </style>
