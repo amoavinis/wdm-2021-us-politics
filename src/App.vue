@@ -1,6 +1,9 @@
 <template>
   <div id="container">
-    <particles-bg type="cobweb" color="white" :bg="true" />
+    <vue-particles
+      id="tsparticles"
+      :options="particlesOptions"
+    />
     <Header @event1="selectTab"></Header>
     <Information v-if="selectedTab==0"/>
     <Demographics v-if="selectedTab==1"/>
@@ -18,12 +21,9 @@ import Topics from './components/Topics.vue'
 import Clustering from './components/Clustering'
 import Information from './components/Information.vue'
 import GraphAnalysis from './components/GraphAnalysis.vue'
-import { ParticlesBg } from "particles-bg-vue";
-
 export default {
   name: 'App',
   components: {
-    ParticlesBg,
     Header,
     Demographics,
     Topics,
@@ -34,7 +34,19 @@ export default {
 
   data: () => {
     return {
-      selectedTab: 0
+      selectedTab: 0,
+      particlesOptions: {
+        background: { color: { value: "transparent" } },
+        fullScreen: { enable: true, zIndex: -1 },
+        particles: {
+          color: { value: "#ffffff" },
+          links: { color: "#ffffff", distance: 150, enable: true, opacity: 0.4, width: 1 },
+          move: { enable: true, speed: 2 },
+          number: { density: { enable: true, area: 800 }, value: 80 },
+          opacity: { value: 0.5 },
+          size: { value: { min: 1, max: 3 } },
+        },
+      },
     };
   },
 

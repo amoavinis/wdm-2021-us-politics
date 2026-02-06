@@ -1,20 +1,22 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 import HighchartsVue from "highcharts-vue"
 import Highcharts from "highcharts"
 import packedbubble from 'highcharts/highcharts-more'
-import VuePageTitle from 'vue-page-title'
+import { pageTitle } from 'vue-page-title'
+import Particles from '@tsparticles/vue3'
+import { loadSlim } from '@tsparticles/slim'
 
 packedbubble(Highcharts)
 
-Vue.use(HighchartsVue);
+const app = createApp(App)
 
-Vue.use(VuePageTitle, {
-  suffix: ''
+app.use(HighchartsVue)
+app.use(pageTitle, { suffix: '' })
+app.use(Particles, {
+  init: async (engine) => {
+    await loadSlim(engine)
+  }
 })
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+app.mount('#app')

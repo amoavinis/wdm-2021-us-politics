@@ -39,6 +39,8 @@
 
 <script>
 export default {
+  emits: ['event1'],
+
   data: () => {
     return {
       selectedTab: 0,
