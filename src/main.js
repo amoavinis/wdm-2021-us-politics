@@ -2,12 +2,16 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import HighchartsVue from "highcharts-vue"
 import Highcharts from "highcharts"
-import packedbubble from 'highcharts/highcharts-more'
+import 'highcharts/highcharts-more'
+
+Highcharts.setOptions({
+  lang: {
+    locale: 'en-US'
+  }
+})
 import { pageTitle } from 'vue-page-title'
 import Particles from '@tsparticles/vue3'
 import { loadSlim } from '@tsparticles/slim'
-
-packedbubble(Highcharts)
 
 const app = createApp(App)
 

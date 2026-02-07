@@ -124,10 +124,6 @@ export default {
   color: white;
 }
 
-.not-selected {
-
-}
-
 .header-right {
   float: left;
 }
