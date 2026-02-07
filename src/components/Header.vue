@@ -47,7 +47,6 @@ export default {
     };
   },
 
-  title: "Twitter Data Mining about 2020's United States Elections",
   methods: {
     emitToParent(event) {
       this.$emit("event1", event);
